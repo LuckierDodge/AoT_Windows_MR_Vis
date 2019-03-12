@@ -113,184 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &164228291 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1115584466216100, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!4 &164228292 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!1 &168821239 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1218861472641196, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!1 &352859042 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1948411752114774, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!1 &550149043 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1747072855138370, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!1 &694341956
-GameObject:
+--- !u!1001 &1649770371
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 694341958}
-  - component: {fileID: 694341957}
-  m_Layer: 0
-  m_Name: VRTK SDK_Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &694341957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694341956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5837af0260a118e4d808bfe0405429a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoManageScriptDefines: 1
-  activeScriptingDefineSymbolsWithoutSDKClasses: []
-  scriptAliasLeftController: {fileID: 0}
-  scriptAliasRightController: {fileID: 0}
-  autoManageVRSettings: 1
-  autoLoadSetup: 1
-  setups:
-  - {fileID: 1518366677}
-  excludeTargetGroups: 1b0000001a000000
-  persistOnLoad: 0
---- !u!4 &694341958
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694341956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1518366678}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &710879414 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1177596427991044, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!1 &1211543864 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1562214307688942, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!1 &1518366676
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1518366678}
-  - component: {fileID: 1518366677}
-  m_Layer: 0
-  m_Name: Windows MR SDK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1518366677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1518366676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoPopulateObjectReferences: 0
-  actualBoundaries: {fileID: 164228291}
-  actualHeadset: {fileID: 168821239}
-  actualLeftController: {fileID: 550149043}
-  actualRightController: {fileID: 352859042}
-  modelAliasLeftController: {fileID: 710879414}
-  modelAliasRightController: {fileID: 1211543864}
-  cachedSystemSDKInfo:
-    baseTypeName: VRTK.SDK_BaseSystem
-    fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_WindowsMR
-    descriptionIndex: 0
-  cachedBoundariesSDKInfo:
-    baseTypeName: VRTK.SDK_BaseBoundaries
-    fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_WindowsMRBoundaries
-    descriptionIndex: 0
-  cachedHeadsetSDKInfo:
-    baseTypeName: VRTK.SDK_BaseHeadset
-    fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_WindowsMRHeadset
-    descriptionIndex: 0
-  cachedControllerSDKInfo:
-    baseTypeName: VRTK.SDK_BaseController
-    fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_WindowsMRController
-    descriptionIndex: 0
---- !u!4 &1518366678
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1518366676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 164228292}
-  m_Father: {fileID: 694341958}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1536697490 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1884512561028486, guid: 702cef7d88a6428488e3a411d4104758,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133088484}
---- !u!114 &1536697492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1536697490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da1f792ef28efd943afaf5855495bd42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyParentRootOnLoad: 1
-  AnimateControllerModel: 1
-  AlwaysUseAlternateLeftModel: 0
-  AlwaysUseAlternateRightModel: 0
-  AlternateLeftController: {fileID: 0}
-  AlternateRightController: {fileID: 0}
-  TouchpadTouchedOverride: {fileID: 0}
-  GLTFMaterial: {fileID: 2100000, guid: 2ac78523d661e954c83d799f582b22e8, type: 2}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062531053690922, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1900725526
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,50 +220,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &2133088484
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1518366678}
-    m_Modifications:
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152726397693544, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114041502856530498, guid: 702cef7d88a6428488e3a411d4104758,
-        type: 2}
-      propertyPath: forceRoomScaleTracking
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 702cef7d88a6428488e3a411d4104758, type: 2}
-  m_IsPrefabParent: 0
