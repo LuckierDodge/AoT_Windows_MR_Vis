@@ -687,8 +687,9 @@ GameObject:
   m_Component:
   - component: {fileID: 619877948}
   - component: {fileID: 619877947}
+  - component: {fileID: 619877949}
   m_Layer: 0
-  m_Name: Explore_Map
+  m_Name: Map Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -834,6 +835,23 @@ Transform:
   m_Father: {fileID: 873880688}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &619877949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 619877946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c531936e5e320e54e899c44cb3f05198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 0}
+  TempVisualization: 0
+  LightVisualization: 0
+  locationStrings: []
+  _spawnScale: 1
+  _markerPrefab: {fileID: 0}
 --- !u!1 &873880687
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +890,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 905308350}
+  - component: {fileID: 905308351}
   m_Layer: 0
   m_Name: Temperature Component
   m_TagString: Untagged
@@ -896,6 +915,17 @@ Transform:
   m_Father: {fileID: 873880688}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905308351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905308349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8dafe0351b837b45a604ef02f30d12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1048197444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1055,7 @@ GameObject:
   - component: {fileID: 1380547770}
   m_Layer: 0
   m_Name: Column
-  m_TagString: Untagged
+  m_TagString: Parameter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
