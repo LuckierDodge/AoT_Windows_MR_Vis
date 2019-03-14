@@ -54,7 +54,7 @@ MonoBehaviour:
   _options:
     locationOptions:
       latitudeLongitude: 41.878377, -87.627678
-      zoom: 22
+      zoom: 16
     extentOptions:
       extentType: 1
       defaultExtents:
@@ -76,7 +76,7 @@ MonoBehaviour:
       snapMapToZero: 0
     scalingOptions:
       scalingType: 1
-      unityTileSize: 100
+      unityTileSize: 20
     loadingTexture: {fileID: 0}
     tileMaterial: {fileID: 0}
   _initializeOnStart: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
         colliderOptions:
           colliderType: 0
         materialOptions:
-          style: 3
+          style: 2
           texturingType: 0
           materials:
           - Materials:
@@ -199,7 +199,7 @@ MonoBehaviour:
           - Materials:
             - {fileID: 0}
           atlasInfo: {fileID: 11400000, guid: c422f39ca8fe566479230c87805b3301, type: 2}
-          lightStyleOpacity: 1
+          lightStyleOpacity: 0.5
           darkStyleOpacity: 1
           colorStyleColor: {r: 0, g: 0, b: 0, a: 0}
           samplePalettes: 0
@@ -243,16 +243,16 @@ MonoBehaviour:
         extrusionOptions:
           _selectedLayerName: road
           extrusionType: 5
-          extrusionGeometryType: 0
+          extrusionGeometryType: 1
           propertyName: height
           propertyDescription: 
           minimumHeight: 0
-          maximumHeight: 1
+          maximumHeight: 0.01
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
         materialOptions:
-          style: 0
+          style: 2
           texturingType: 0
           materials:
           - Materials:
@@ -260,7 +260,7 @@ MonoBehaviour:
           - Materials:
             - {fileID: 0}
           atlasInfo: {fileID: 0}
-          lightStyleOpacity: 1
+          lightStyleOpacity: 0.5
           darkStyleOpacity: 1
           colorStyleColor: {r: 0, g: 0, b: 0, a: 0}
           samplePalettes: 0
