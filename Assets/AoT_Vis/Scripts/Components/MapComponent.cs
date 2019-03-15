@@ -11,29 +11,32 @@ namespace AoT_Vis
 
 	public class MapComponent : MonoBehaviour
 	{
-		[SerializeField]
+        public DataManager dataManager;
+        public ComponentManager componentManager;
+
+        [SerializeField]
 		AbstractMap _map;
-		[SerializeField]
 		[Geocode]
 		List<string> locationStrings;
 		[SerializeField]
-        float _spawnScale = 100f;
+        float _spawnScale = 1f;
 		[SerializeField]
         GameObject _markerPrefab;
+        [SerializeField]
+        GameObject _selectedMarkerPrefab;
 
         Vector2d[] _locations;
-        List<GameObject> _spawnedObjects;
+        List<GameObject> _spawnedObjects = new List<GameObject>();
         public List<string> nodes;
+        GameObject selectedMarkerInstance;
 
         void Start()
 		{
-            _spawnedObjects = new List<GameObject>();
-            nodes = new List<string>();
-
-            getNodes(nodes);
+            nodes = dataManager.NodeIds;
+            locationStrings = dataManager.NodeLocations;
 
             _locations = new Vector2d[locationStrings.ToArray().Length];
-            for (int i = 0; i < locationStrings.ToArray().Length - 1; i++)
+            for (int i = 0; i < locationStrings.ToArray().Length; i++)
 			{
 				var locationString = locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
@@ -43,6 +46,8 @@ namespace AoT_Vis
                 
                 _spawnedObjects.Add(instance);
 			}
+            selectedMarkerInstance = Instantiate(_selectedMarkerPrefab);
+            highlightSelectedNode();
 		}
 
 		private void Update()
@@ -55,31 +60,16 @@ namespace AoT_Vis
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 			}
+            highlightSelectedNode();
 		}
 
-        private void getNodes(List<string> nodes)
+        private void highlightSelectedNode()
         {
-            //Database Stuff
-            NpgsqlConnection conn = new NpgsqlConnection("Server=flick.cs.niu.edu;Port=5432;User Id=readonly;Database=aot;CommandTimeout=240");
-            conn.Open();
-            NpgsqlCommand command = new NpgsqlCommand("SELECT FORMAT('%s, %s', lat, lon) lat_lon, aot_node_id FROM aot_nodes WHERE project_id = 'AoT_Chicago';", conn);
+            string selectedNodeId = dataManager.SelectedNodeId;
 
-            try
-            {
-                NpgsqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    locationStrings.Add(reader.GetString(0));
-                    nodes.Add(reader.GetString(1));
-                }
-            }
-            catch (System.Exception ex)
-            {
-                Console.print(ex.ToString());
-                Console.print("Error reading query for node locations.");
-            }
-
-            conn.Close();
+            Vector2d selectedLocation = _locations[dataManager.NodeIds.FindIndex(x => x == selectedNodeId)];
+            selectedMarkerInstance.transform.localPosition = _map.GeoToWorldPosition(selectedLocation, true);
+            selectedMarkerInstance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
         }
 	}
 }

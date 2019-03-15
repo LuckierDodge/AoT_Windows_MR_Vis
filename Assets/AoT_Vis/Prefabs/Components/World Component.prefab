@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4516137425741718}
   - component: {fileID: 114634355096490290}
   m_Layer: 0
-  m_Name: World_Map
+  m_Name: World Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

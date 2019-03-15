@@ -4,15 +4,15 @@
     using System.Collections.Generic;
     using UnityEngine;
 
-    public class TemperatureComponent : MonoBehaviour
+    public class ComponentManager : MonoBehaviour
     {
 
         public DataManager dataManager;
-        public ComponentManager componentManager;
 
         // Use this for initialization
         void Start()
         {
+
         }
 
         // Update is called once per frame
@@ -22,4 +22,3 @@
         }
     }
 }
-
