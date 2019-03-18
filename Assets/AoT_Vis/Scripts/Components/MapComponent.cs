@@ -48,7 +48,7 @@ namespace AoT_Vis
 			}
             selectedMarkerInstance = Instantiate(_selectedMarkerPrefab);
             highlightSelectedNode();
-		}
+        }
 
 		private void Update()
 		{
@@ -61,7 +61,7 @@ namespace AoT_Vis
 				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 			}
             highlightSelectedNode();
-		}
+        }
 
         private void highlightSelectedNode()
         {

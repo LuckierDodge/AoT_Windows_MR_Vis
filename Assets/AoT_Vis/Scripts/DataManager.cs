@@ -27,8 +27,8 @@
             NodeStart = new List<string>();
             NodeEnd = new List<string>();
 
-            //fetchNodeData();
-            fakeNodeData();
+            fetchNodeData();
+            //fakeNodeData();
             SelectedNodeId = NodeIds[0];
             ViewDate = "2018-06-01";
             ViewTime = "12:00:00";
@@ -61,7 +61,7 @@
             //Database Stuff
             NpgsqlConnection conn = new NpgsqlConnection("Server=flick.cs.niu.edu;Port=5432;User Id=readonly;Database=aot;CommandTimeout=240");
             conn.Open();
-            NpgsqlCommand command = new NpgsqlCommand("SELECT FORMAT('%s, %s', lat, lon) lat_lon, aot_node_id FROM aot_nodes WHERE project_id = 'AoT_Chicago';", conn);
+            NpgsqlCommand command = new NpgsqlCommand("SELECT FORMAT('%s, %s', lat, lon) lat_lon, aot_node_id, address, start_timestamp, end_timestamp FROM aot_nodes WHERE project_id = 'AoT_Chicago' AND aot_node_id != '001e0610ef73';", conn);
 
             try
             {
@@ -72,7 +72,14 @@
                     NodeIds.Add(reader.GetString(1));
                     NodeAddresses.Add(reader.GetString(2));
                     NodeStart.Add(reader.GetTimeStamp(3).ToString());
-                    NodeEnd.Add(reader.GetTimeStamp(4).ToString());
+                    try
+                    {
+                        NodeEnd.Add(reader.GetTimeStamp(4).ToString());
+                    }
+                    catch (System.InvalidCastException icex)
+                    {
+                        NodeEnd.Add("");
+                    }
                 }
             }
             catch (System.Exception ex)
