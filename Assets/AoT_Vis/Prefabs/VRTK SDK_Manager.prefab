@@ -462,19 +462,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTeleport: 1
   targetListPolicy: {fileID: 0}
-  pointerRenderer: {fileID: 0}
+  pointerRenderer: {fileID: 114533642671117772}
   activationButton: 10
   holdButtonToActivate: 0
   activateOnEnable: 1
   activationDelay: 0
-  selectionButton: 10
+  selectionButton: 3
   selectOnPress: 0
   selectionDelay: 0
   selectAfterHoverDuration: 0
   interactWithObjects: 0
   grabToPointerTip: 0
   attachedTo: {fileID: 1420434123450788}
-  controllerEvents: {fileID: 0}
+  controllerEvents: {fileID: 114733003005891600}
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
   controller: {fileID: 114733003005891600}
@@ -579,14 +579,14 @@ MonoBehaviour:
   holdButtonToActivate: 0
   activateOnEnable: 1
   activationDelay: 0
-  selectionButton: 10
+  selectionButton: 3
   selectOnPress: 1
   selectionDelay: 0
   selectAfterHoverDuration: 0
   interactWithObjects: 0
   grabToPointerTip: 0
   attachedTo: {fileID: 1128685117426166}
-  controllerEvents: {fileID: 0}
+  controllerEvents: {fileID: 114159228070337508}
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
   controller: {fileID: 114159228070337508}

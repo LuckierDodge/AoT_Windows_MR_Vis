@@ -10,6 +10,7 @@
         public string ViewTime { get; set; }
         public string ViewDate { get; set; }
         public string SelectedNodeId { get; set; }
+        public string HighlightedNode { get; set; }
 
         //Node Info Data
         public List<string> NodeIds { get; private set; }
@@ -88,6 +89,11 @@
             }
 
             conn.Close();
+        }
+
+        public void changeSelectedNode(string newNodeId)
+        {
+            SelectedNodeId = newNodeId;
         }
 
     }
