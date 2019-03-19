@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 114264367959715308}
   - component: {fileID: 114907915270909000}
   m_Layer: 0
-  m_Name: Visualization Panel
+  m_Name: Visualization Suite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

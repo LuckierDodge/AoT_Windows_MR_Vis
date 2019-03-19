@@ -54,7 +54,7 @@ MonoBehaviour:
   _options:
     locationOptions:
       latitudeLongitude: 41.878377, -87.627678
-      zoom: 16
+      zoom: 15
     extentOptions:
       extentType: 1
       defaultExtents:
@@ -76,7 +76,7 @@ MonoBehaviour:
       snapMapToZero: 0
     scalingOptions:
       scalingType: 1
-      unityTileSize: 20
+      unityTileSize: 100
     loadingTexture: {fileID: 0}
     tileMaterial: {fileID: 0}
   _initializeOnStart: 1
