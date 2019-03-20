@@ -7,6 +7,8 @@
 
     public class DataManager : MonoBehaviour
     {
+        public ComponentManager componentManager;
+
         public string ViewTime { get; set; }
         public string ViewDate { get; set; }
         public string SelectedNodeId { get; set; }
@@ -94,6 +96,7 @@
         public void changeSelectedNode(string newNodeId)
         {
             SelectedNodeId = newNodeId;
+            componentManager.updateWorldPosition();
         }
 
     }

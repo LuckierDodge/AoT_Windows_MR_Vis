@@ -182,10 +182,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1863638258323748, guid: 812a59571fa6690409b7d9583039a0ee, type: 2}
-      propertyPath: m_Name
-      value: Visualization Suite
-      objectReference: {fileID: 0}
     - target: {fileID: 114149389016356104, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
       propertyPath: destination_marker_left
@@ -283,6 +279,36 @@ Prefab:
       propertyPath: pointerRenderer
       value: 
       objectReference: {fileID: 642449710}
+    - target: {fileID: 114533642671117772, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389692155772728, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733003005891600, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114159228070337508, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599297542826024, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389304365191032, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52de52508c39e0b45ad7658f4eb83c1b, type: 2}
   m_IsPrefabParent: 0

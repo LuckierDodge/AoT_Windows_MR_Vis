@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e330dacf069d6047a585153adcfea7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination_marker_left: {fileID: 0}
+  destination_marker_right: {fileID: 0}
   pointer_left: {fileID: 0}
   pointer_right: {fileID: 0}
   dataManager: {fileID: 114264367959715308}
@@ -157,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0989c59beca9fd047afcf53f9d85a891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentManager: {fileID: 114907915270909000}
 --- !u!114 &114298703134002262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -565,3 +568,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 114264367959715308}
+  worldComponent: {fileID: 1477844118597646}
