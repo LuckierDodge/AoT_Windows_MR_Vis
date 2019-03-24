@@ -12,6 +12,7 @@
         public string ViewTime { get; set; }
         public string ViewDate { get; set; }
         public string SelectedNodeId { get; set; }
+        public string SelectedNodeAddress { get; set; }
         public string HighlightedNode { get; set; }
 
         //Node Info Data
@@ -20,6 +21,8 @@
         public List<string> NodeAddresses { get; private set; }
         public List<string> NodeStart { get; private set; }
         public List<string> NodeEnd { get; private set; }
+        public List<string> NodeLat { get; private set; }
+        public List<string> NodeLon { get; private set; }
 
         // Use this for initialization
         void Awake()
@@ -29,34 +32,15 @@
             NodeAddresses = new List<string>();
             NodeStart = new List<string>();
             NodeEnd = new List<string>();
+            NodeLat = new List<string>();
+            NodeLon = new List<string>();
 
             fetchNodeData();
             //fakeNodeData();
             SelectedNodeId = NodeIds[0];
+            SelectedNodeAddress = NodeAddresses[0];
             ViewDate = "2018-06-01";
             ViewTime = "12:00:00";
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
-
-
-        private void fakeNodeData()
-        {
-            NodeLocations.Add("41.878377, -87.627678");
-            NodeIds.Add("001e0610ba46");
-            NodeAddresses.Add("State St & Jackson Blvd Chicago IL");
-            NodeStart.Add("2017-10-09 00:00:00");
-            NodeEnd.Add("");
-
-            NodeLocations.Add("41.923996, -87.761072");
-            NodeIds.Add("001e0610ee5d");
-            NodeAddresses.Add("Long Ave & Fullerton Ave Chicago IL");
-            NodeStart.Add("2018-02-23 00:00:00");
-            NodeEnd.Add("");
         }
 
         private void fetchNodeData()
@@ -64,7 +48,7 @@
             //Database Stuff
             NpgsqlConnection conn = new NpgsqlConnection("Server=flick.cs.niu.edu;Port=5432;User Id=readonly;Database=aot;CommandTimeout=240");
             conn.Open();
-            NpgsqlCommand command = new NpgsqlCommand("SELECT FORMAT('%s, %s', lat, lon) lat_lon, aot_node_id, address, start_timestamp, end_timestamp FROM aot_nodes WHERE project_id = 'AoT_Chicago' AND aot_node_id != '001e0610ef73';", conn);
+            NpgsqlCommand command = new NpgsqlCommand("SELECT FORMAT('%s, %s', lat, lon) lat_lon, aot_node_id, address, start_timestamp, end_timestamp, lat, lon FROM aot_nodes WHERE project_id = 'AoT_Chicago' AND aot_node_id != '001e0610ef73';", conn);
 
             try
             {
@@ -83,6 +67,8 @@
                     {
                         NodeEnd.Add("");
                     }
+                    NodeLat.Add(reader.GetString(5));
+                    NodeLon.Add(reader.GetString(6));
                 }
             }
             catch (System.Exception ex)
@@ -96,8 +82,8 @@
         public void changeSelectedNode(string newNodeId)
         {
             SelectedNodeId = newNodeId;
-            componentManager.updateWorldPosition();
+            SelectedNodeAddress = NodeAddresses[NodeIds.FindIndex(x => x == newNodeId)];
+            componentManager.updateNode();
         }
-
     }
 }

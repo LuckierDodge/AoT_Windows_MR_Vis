@@ -12,25 +12,18 @@
 
         public DataManager dataManager;
         public GameObject worldComponent;
+        public GameObject nodeInfoComponent;
 
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public void updateWorldPosition()
+        public void updateNode()
         {
             if (worldComponent != null)
             {
                 worldComponent.GetComponent<AbstractMap>().SetCenterLatitudeLongitude(Conversions.StringToLatLon(dataManager.NodeLocations[dataManager.NodeIds.FindIndex(x => x == dataManager.SelectedNodeId)]));
                 worldComponent.GetComponent<AbstractMap>().UpdateMap();
+            }
+            if(nodeInfoComponent != null)
+            {
+                nodeInfoComponent.GetComponent<NodeInfoComponent>().updateNodeInfo();
             }
         }
     }
