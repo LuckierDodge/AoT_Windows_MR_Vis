@@ -35,8 +35,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325912633143484}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2, z: 2.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 20, z: 20}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,12 +55,14 @@ MonoBehaviour:
   dataManager: {fileID: 0}
   componentManager: {fileID: 0}
   _map: {fileID: 114927137955737218}
-  _spawnScale: 1
+  _spawnScale: 5
   _markerPrefab: {fileID: 1273502309159340, guid: a0e5f67b371072d449626f3f7bef8df2,
     type: 2}
   _selectedMarkerPrefab: {fileID: 1156301315543888, guid: 2efd9c2bcff7bb64294b50b9950f3ea3,
     type: 2}
+  spawnedObjects: []
   nodes: []
+  selectedMarkerInstance: {fileID: 0}
 --- !u!114 &114927137955737218
 MonoBehaviour:
   m_ObjectHideFlags: 1

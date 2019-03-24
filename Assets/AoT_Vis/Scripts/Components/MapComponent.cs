@@ -26,9 +26,9 @@ namespace AoT_Vis
         GameObject _selectedMarkerPrefab;
 
         Vector2d[] _locations;
-        List<GameObject> _spawnedObjects = new List<GameObject>();
+        public List<GameObject> spawnedObjects = new List<GameObject>();
         public List<string> nodes;
-        GameObject selectedMarkerInstance;
+        public GameObject selectedMarkerInstance;
 
         void Start()
 		{
@@ -45,7 +45,7 @@ namespace AoT_Vis
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                 
-                _spawnedObjects.Add(instance);
+                spawnedObjects.Add(instance);
 			}
             selectedMarkerInstance = Instantiate(_selectedMarkerPrefab);
             highlightSelectedNode();
@@ -53,10 +53,10 @@ namespace AoT_Vis
 
 		private void Update()
 		{
-			int count = _spawnedObjects.Count;
+			int count = spawnedObjects.Count;
 			for (int i = 0; i < count; i++)
 			{
-				var spawnedObject = _spawnedObjects[i];
+				var spawnedObject = spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
