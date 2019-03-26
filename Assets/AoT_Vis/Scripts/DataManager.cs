@@ -9,11 +9,15 @@
     {
         public ComponentManager componentManager;
 
-        public string ViewTime { get; set; }
-        public string ViewDate { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public string SelectedNodeId { get; set; }
         public string SelectedNodeAddress { get; set; }
         public string HighlightedNode { get; set; }
+
+        //Node Sensor Data
+        public Dictionary<string, string> TemperatureReadings { get; set; }
+        string[] tempSensors = new string[] { "bmp180", "htu21d", "pr103j2", "tsys01", "tmp112"};
 
         //Node Info Data
         public List<string> NodeIds { get; private set; }
@@ -34,13 +38,14 @@
             NodeEnd = new List<string>();
             NodeLat = new List<string>();
             NodeLon = new List<string>();
+            TemperatureReadings = new Dictionary<string, string>();
 
             fetchNodeData();
-            //fakeNodeData();
             SelectedNodeId = NodeIds[0];
             SelectedNodeAddress = NodeAddresses[0];
-            ViewDate = "2018-06-01";
-            ViewTime = "12:00:00";
+            EndTime = "2018-06-15 13:00:00";
+            StartTime = "2018-06-15 12:00:00";
+            getSelectedNodeTempData();
         }
 
         private void fetchNodeData()
@@ -79,10 +84,46 @@
             conn.Close();
         }
 
+        private void getSelectedNodeTempData()
+        {
+            TemperatureReadings.Clear();
+
+            foreach (string sensor in tempSensors)
+            {
+                //Database Stuff
+                NpgsqlConnection conn = new NpgsqlConnection("Server=flick.cs.niu.edu;Port=5432;User Id=readonly;Database=aot;CommandTimeout=240");
+                conn.Open();
+                NpgsqlCommand command = new NpgsqlCommand("SELECT value_hrf FROM data WHERE aot_node_id = '" + 
+                    SelectedNodeId + 
+                    "' AND sensor = '" +
+                    sensor +
+                    "' and parameter = 'temperature' AND timestamp >= '" + 
+                     StartTime + 
+                     "' AND timestamp < '" +
+                     EndTime + "' LIMIT 1;", conn);
+
+                try
+                {
+                    NpgsqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        TemperatureReadings.Add(sensor, reader.GetString(0));
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    print(ex.Message);
+                }
+
+                conn.Close();
+            }
+        }
+
         public void changeSelectedNode(string newNodeId)
         {
             SelectedNodeId = newNodeId;
             SelectedNodeAddress = NodeAddresses[NodeIds.FindIndex(x => x == newNodeId)];
+            getSelectedNodeTempData();
             componentManager.updateNode();
         }
     }

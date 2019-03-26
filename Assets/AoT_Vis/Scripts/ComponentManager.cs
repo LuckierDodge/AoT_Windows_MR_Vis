@@ -14,6 +14,18 @@
         public GameObject worldComponent;
         public GameObject nodeInfoComponent;
         public GameObject mapComponent;
+        public GameObject sensorComponents;
+
+        public List<TemperatureComponent> temperatureComponents;
+
+        void Start()
+        {
+        }
+
+        public void registerTemperatureComponent(TemperatureComponent component)
+        {
+            temperatureComponents.Add(component);
+        }
 
         public void updateNode()
         {
@@ -25,6 +37,10 @@
             if(nodeInfoComponent)
             {
                 nodeInfoComponent.GetComponent<NodeInfoComponent>().updateNodeInfo();
+            }
+            foreach (TemperatureComponent sensor in temperatureComponents)
+            {
+                sensor.updateValue();
             }
         }
 
