@@ -43,8 +43,8 @@
             fetchNodeData();
             SelectedNodeId = NodeIds[0];
             SelectedNodeAddress = NodeAddresses[0];
-            EndTime = "2018-06-15 13:00:00";
             StartTime = "2018-06-15 12:00:00";
+            EndTime = "2018-06-15 13:00:00";
             getSelectedNodeTempData();
         }
 
@@ -112,7 +112,7 @@
                 }
                 catch (System.Exception ex)
                 {
-                    print(ex.Message);
+                    print(ex);
                 }
 
                 conn.Close();

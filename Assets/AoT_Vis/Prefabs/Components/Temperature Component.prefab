@@ -607,7 +607,7 @@ MonoBehaviour:
   m_text: "22.5\xB0C\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33db60c37b63f08448ded4b385e74e38, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -680,7 +680,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -711,6 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataManager: {fileID: 0}
   componentManager: {fileID: 0}
+  sensor: 
 --- !u!114 &114882427265925426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -936,5 +937,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.35}
-  m_SizeDelta: {x: 0.3, y: 0.15}
+  m_SizeDelta: {x: 0.35, y: 0.15}
   m_Pivot: {x: 0.5, y: 0.5}

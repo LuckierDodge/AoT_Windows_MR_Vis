@@ -59,6 +59,10 @@
             {
                 nodeInfoComponent.SetActive(isActive);
             }
+            if (sensorComponents)
+            {
+                sensorComponents.SetActive(isActive);
+            }
         }
     }
 }
