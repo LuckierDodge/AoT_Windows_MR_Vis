@@ -602,6 +602,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4002878122930444, guid: 812a59571fa6690409b7d9583039a0ee,
     type: 2}
   m_PrefabInternal: {fileID: 1974333030}
+--- !u!20 &1578884101 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20338127141170072, guid: 52de52508c39e0b45ad7658f4eb83c1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581413073}
 --- !u!1001 &1581413073
 Prefab:
   m_ObjectHideFlags: 0
@@ -1021,22 +1026,22 @@ Prefab:
     - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundCenterOptions.west
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundCenterOptions.north
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundCenterOptions.east
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundCenterOptions.south
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114907915270909000, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
@@ -1121,7 +1126,7 @@ Prefab:
     - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
         type: 2}
       propertyPath: _vectorData._layerProperty.performanceOptions.entityPerCoroutine
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4941071866671370, guid: 812a59571fa6690409b7d9583039a0ee, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1206,6 +1211,46 @@ Prefab:
         type: 2}
       propertyPath: m_fontColor.b
       value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _options.placementOptions.snapMapToZero
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _imagery._layerProperty.rasterOptions.useCompression
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _terrain._layerProperty.sourceType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _options.extentOptions.extentType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _options.extentOptions.defaultExtents.cameraBoundsOptions.camera
+      value: 
+      objectReference: {fileID: 1578884101}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _options.locationOptions.zoom
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146427435375480, guid: 812a59571fa6690409b7d9583039a0ee,
+        type: 2}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.sublayerName
+      value: Buildings
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 812a59571fa6690409b7d9583039a0ee, type: 2}
